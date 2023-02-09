@@ -1,10 +1,17 @@
-import { Roboto } from '@next/font/google';
+import { Roboto, Roboto_Condensed } from '@next/font/google';
 import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
 export const roboto = Roboto({
     weight: ['300', '400', '500', '700'],
-    subsets: ['latin'],
+    subsets: ['vietnamese'],
+    display: 'swap',
+    fallback: ['Helvetica', 'Arial', 'sans-serif'],
+});
+
+export const robotoCondensed = Roboto_Condensed({
+    weight: ['300', '400', '700'],
+    subsets: ['vietnamese'],
     display: 'swap',
     fallback: ['Helvetica', 'Arial', 'sans-serif'],
 });
@@ -18,12 +25,9 @@ const theme = createTheme({
         secondary: {
             main: '#19857b',
         },
-        error: {
-            main: red.A400,
-        },
     },
     typography: {
-        fontFamily: roboto.style.fontFamily,
+        fontFamily: robotoCondensed.style.fontFamily,
     },
 });
 
