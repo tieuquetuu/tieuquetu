@@ -10,9 +10,9 @@ function Layout(props) {
 
     return(<Fragment>
         {/* Header */}
-        <AppBar>
+        <AppBar color={'primary'}>
             <Toolbar>
-                <Typography variant={'h1'} component={'span'}>
+                <Typography variant={'h6'} component={'span'}>
                     Logo
                 </Typography>
             </Toolbar>
