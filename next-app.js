@@ -5,14 +5,12 @@ require('dotenv').config()
 
 const { dev, hostname, port, dir } = require('./inc/config')
 
-
 const options = {
     customServer: true,
     dev,
     port,
     hostname,
-    dir,
-    // conf
+    dir
 }
 
 const NextApp = Next(options)

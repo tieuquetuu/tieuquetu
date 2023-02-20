@@ -28,8 +28,7 @@ bot.help((ctx) => ctx.reply("Send me a sticker"));
 bot.on("sticker", (ctx) => ctx.reply("🐶"));
 bot.on("message", async (ctx) => {
 
-    console.log(ctx)
-
+    console.log(ctx.from)
     const message = ctx.update.message.text;
     if (message.match(/hello/)) {
         ctx.reply("Xin chào");
@@ -48,8 +47,8 @@ bot.launch().then(() => console.log("bot is running"))
 })*/
 
 // Khởi tạo server nextjs
-/*NextApp.prepare().then(() => {
+NextApp.prepare().then(() => {
     app.use(nextRouter)
-})*/
+})
 
 module.exports = app

@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "nodemon ./bin/www",
     "build": "next build",
-    "start": "next start",
+    "start": "cross-env NODE_ENV=production node ./bin/www",
     "lint": "next lint"
   },
   "dependencies": {
@@ -35,12 +35,21 @@
     "eslint-config-next": "13.1.6",
     "express": "^4.18.2",
     "gsap": "^3.11.4",
+    "moment": "^2.29.4",
     "morgan": "^1.10.0",
     "next": "13.1.6",
     "next-auth": "^4.19.2",
+    "next-redux-wrapper": "^8.1.0",
     "node-telegram-bot-api": "^0.61.0",
+    "nprogress": "^0.2.0",
+    "randomstring": "^1.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-intl": "^6.2.8",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.2",
     "telegraf": "^4.11.2",
     "vhost": "^3.0.2"
   }
