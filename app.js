@@ -37,6 +37,7 @@ bot.on("message", async (ctx) => {
     }
 });
 bot.launch().then(() => console.log("bot is running"))
+
 /*bot.launch().then(()=>{
 
     console.log("Telegram bot đã chạy !!!")
