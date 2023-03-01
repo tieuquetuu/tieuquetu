@@ -26,14 +26,13 @@ const bot = new Telegraf( telegramBotToken )
 bot.start((ctx) => ctx.reply("Wellcome"))
 bot.help((ctx) => ctx.reply("Send me a sticker"));
 bot.on("sticker", (ctx) => ctx.reply("🐶"));
-bot.on("message", async (ctx) => {
-
-    console.log(ctx.from)
-    const message = ctx.update.message.text;
+bot.on("message", async (context) => {
+    // console.log(context)
+    const message = context.update.message.text;
     if (message.match(/hello/)) {
-        ctx.reply("Xin chào");
+        context.reply("Xin chào");
     } else {
-        ctx.reply("Hong hiểu...");
+        context.reply("Hong hiểu...");
     }
 });
 bot.launch().then(() => console.log("bot is running"))
